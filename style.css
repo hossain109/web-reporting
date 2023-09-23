@@ -1,0 +1,256 @@
+/* css menu*/
+.question{
+      color: rgb(78, 109, 136);
+
+      font-style: italic;
+}
+.menu{
+
+      background-color: rgb(218, 235, 245);
+
+      color: rgb(78, 109, 136);
+
+      font-weight: 600;
+}
+
+.menu:hover{
+
+      color: rgb(42, 75, 104);
+}
+.activequestion{
+      color: rgb(130, 130, 230);
+      font-size: .9rem;
+}
+.activemenu{
+      background-color: rgb(78, 109, 136);
+
+      color: rgb(218, 235, 245);
+
+      font-size: 1.2rem;
+}
+.logo{
+      padding: 5px;
+}
+.graph{
+      height: 150px ;
+      margin-bottom: 30px;
+
+}
+.graph:last-child{
+      margin-bottom: 50px;
+}
+.average{
+      float: right;
+
+      font-weight: 500;
+
+      font-size: 0.9rem;
+
+      color: rgb(99, 99, 99);
+}
+.paragraph{
+      text-align: center;
+
+      margin-top: 66px;
+
+      margin-bottom: 10px;
+
+      font-weight: 500;
+
+      color: rgb(99, 99, 99);
+}
+/* css for icon display graph type */
+ul#displayTypeGraph a.barres{
+      background-image: url('images/picto-barres.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+}
+ul#displayTypeGraph a.line{
+      background-image: url('images/picto-lignes.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+}
+ul#displayTypeGraph a.table{
+      background-image: url('images/picto-tables.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+}
+ul#displayTypeGraph a.pie{
+      background-image: url('images/pie1.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+}
+ul#displayTypeGraph li a{
+      display: inline-block;
+      width: 24px;
+      height: 20px;
+      opacity: 0.40;
+}
+ul#displayTypeGraph li{
+      width: 18px;
+      height: 30px;
+      list-style-type: none;
+      float: left;
+      margin-right: 10px;
+      padding-top: 10px;
+}
+/*display picto image when graph active*/
+ul#displayTypeGraph li.picto{
+      background-image: url(images/picto-select1.png);
+      background-repeat: no-repeat;
+      background-position: top;
+}
+/*add opacity when add class actual  */
+ul#displayTypeGraph a.actual{
+      opacity: 1;
+}
+ul#displayTypeGraph a:hover {opacity:0.80;}
+ul#displayTypeGraph li.actuel a {opacity:1.00;}
+
+/* css print  icon add*/
+ul.list-unstyled a.toPrint{
+      background-image: url('images/picto-impression.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      padding: 13px;
+      opacity: .6;
+}
+/* css  pdf icon add*/
+ul.list-unstyled a.toPdf{
+      background-image: url('images/picto-diapo-pdf1.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      padding-right: 43px;
+      opacity: .6;
+}
+/* css email icon*/
+ul.list-unstyled a.toEmail{
+      background-image: url('images/email.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      padding-right: 30px;
+      opacity: .6;
+}
+ul.list-unstyled a.toPrint:hover{
+      opacity: 1;
+}
+ul.list-unstyled a.toPdf:hover{
+      opacity: 1;
+}
+ul.list-unstyled a.toEmail:hover{
+      opacity: 1;
+}
+.activemenu:hover{
+      color: rgb(218, 235, 245);
+}
+/*pie chart text display*/
+.averagePie{
+      text-align: center;
+
+      font-weight: 500;
+
+      font-size: 0.9rem;
+
+      color: rgb(99, 99, 99);
+
+}
+/* mobile menu*/
+/*hambarger menu*/
+span.mobile_openNavId{
+      display: none;
+      float: right;
+      position: relative;
+      color: #da9292;
+      font-size: 2rem;
+}
+span.mobile_openNavId:hover{
+	cursor: pointer;
+}
+#mobile_nav.hm_menu a.closebtn{
+      float: right;
+      position: relative;
+      margin-top: -1.4rem;
+      right: 0.8rem;
+      font-size: 3rem;
+      text-decoration: none;
+      color: #fff;
+	}
+.hm_menu{
+	height: 100%;
+	width: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.9);
+	z-index: 999;
+	overflow-x: hidden;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.hm_menu .hm_menu_content{
+	margin-top: 50px;
+}
+.hm_menu .hm_menu_content a.hm_menu_link{
+      display: block;
+      font-size: 1.1rem;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.hm_menu .hm_menu_content a.hm_menu_link:hover{
+	color: #120d0d;
+}
+
+
+/*small device*/
+@media only screen and (max-width: 768px){
+	h2{
+		font-size: 3rem;
+	}
+	h3{
+		font-size: 2rem;
+	
+      }
+	/*disable main menu*/
+	#header span#openNavId{
+		display: none;
+	}
+	/*display menu in small device*/
+	span.mobile_openNavId{
+		display: block;
+	}
+	/*stiky menu*/
+      span.mobile_openNavId{
+		display: block;
+	}
+      /*hide color in mbile*/
+      div.dropdown.d-inline{
+            display: none !important;
+      }
+      /* stiky nav for mobile*/
+/*Stiky navigation*/
+.stiky{
+      position: fixed;
+      top: 0;
+      /* background: #f0e0f5f0; */
+      background: #6C757D;
+      width: 100%;
+      box-shadow: 0 3px 2px rgba(255,255,255,.9);
+      z-index: 99;
+      left: 0;
+      right: 0;
+}
+.stiky-nav .logo{
+      float: left;
+      height: 48px;
+      position: relative;
+      left: 0;
+      margin-left: -30px;
+}
+
+}
+.stiky-nav{
+	text-align: center;
+	padding: 0 2rem;
+	display: none;
+}

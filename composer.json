@@ -1,0 +1,14 @@
+{
+    "require": {
+        "phug/phug": "^1.11",
+        "phug/renderer": "*",
+        "pug-php/pug": "^3.5"
+    },
+    
+    "config": {
+        "allow-plugins": {
+            "nodejs-php-fallback/nodejs-php-fallback": true,
+            "platform-check": false
+        }
+    }
+}

@@ -1,0 +1,66 @@
+
+
+block nav
+
+      div.mobile-menu <!--mobile menu-->
+
+            span(class="mobile_openNavId" onclick="mobile_openNav();") &#9776;
+
+            div(id="mobile_nav" class="hm_menu")
+
+                  a(class="closebtn" onclick="mobile_closeNav();" href="javascript:void(0)") x
+
+                  div(class="hm_menu_content")
+
+                        each $menu in $menus
+
+                              div
+
+                                    a(href="#collapseExample$index" class="menu card card-body  text-decoration-none text-center" data-bs-toggle="collapse" data-bs-toggle="collapse"  role="button" aria-expanded="false" data-index="{$menu[0]}" aria-controls="collapseExample") !=$menu[1]      
+
+                                    div(class = "collapse" id="collapseExample$index")
+
+                                          each $sousmenu in $sousmenus
+
+                                                if $menu[0]==$sousmenu[0]
+
+                                                      div.card.card-body.border-start-0.border-end-0
+
+                                                            a(href="#section_graph" data-index="{$sousmenu[2]}" onclick="mobile_closeNav()" class="text-end question text-decoration-none hm_menu_link" name="#question") =$sousmenu[1] 
+
+                                    -$index++ 
+
+      div(class="stiky-nav" id="my_stiky")
+
+            a(href="") 
+
+                  img(src="./images/favicon.ico", class="logo" width="10%" height="10%" alt="logo", srcset="")
+
+            span(class="mobile_openNavId" onclick="mobile_openNav();") &#9776;
+
+div.text-center
+
+      img(src="./images/logo.png", class="logo text-center bg-light" height="70%" width="70%" alt="logo", srcset="")
+
+
+
+each $menu in $menus   
+
+      div   
+
+            a(href="#" class="menu card card-body  text-decoration-none text-center js--services-section" data-bs-toggle="collapse" data-bs-target="#collapseExample$index"  role="button" aria-expanded="false" data-index="{$menu[0]}" aria-controls="collapseExample") !=$menu[1]      
+
+            div(class = "collapse" id="collapseExample$index")
+
+                  each $sousmenu in $sousmenus
+
+                        if $menu[0]==$sousmenu[0]
+
+                              div.card.card-body.border-start-0.border-end-0
+
+                                    a(href="javascript:void(0)" data-index="{$sousmenu[2]}" class="text-end question text-decoration-none " name="#question") =$sousmenu[1] 
+
+                  -$index++           
+
+
+
